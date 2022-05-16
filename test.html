@@ -288,7 +288,7 @@ Error message and password prompt
 {"created":"20220513075414707","text":"","tags":"Blockchain","title":"Blockchain","modified":"20220513075533548"},
 {"created":"20220514161111948","text":"1. `integerNumber % 10 ** N` 可以将一个整数变为 N 位\n\n2. `intergerNumber % N` 可以将输入的整数域映射到值域 N 位\n\t- 例如判断奇偶 `interger % 2` 其实就是将整数集映射到 0 或 1。奇数映射到1，偶数映射到0","type":"text/x-markdown","title":"Modulus Trick","tags":"Trick","modified":"20220514163303150"},
 {"created":"20220516045631958","text":"ownable.sol","tags":"Blockchain solidity","title":"Ownable contract","modified":"20220516051130263"},
-{"created":"20220516051134897","text":"## struct packing \n- 通常情况下，Solidity 总是会为 uint 类型保留 256 位存储空间， 不管其声明的是哪种类型(uint 8/16/32/256)\n- 例外，在 struct 中如果有多个uint， solidity 可以将空间存储最小化。\n\n```js\nstruct NormalStruct {\n\tuint a;\n\tuint b;\n}\nstruct MiniStruct {\n uint 8 a;\n uint 32 b;\n}\n// 由于使用了结构打包（stack packing） mini 所占用的空间比 normal 小\nNormalStruct normal = NormalStruct(10, 20);\nMiniStruct mini = MiniStruct(10,20);\n","tags":"Blockchain solidity","title":"save gas","modified":"20220516052400618"}
+{"created":"20220516051134897","text":"## struct packing \n- 通常情况下，Solidity 总是会为 uint 类型保留 256 位存储空间， 不管其声明的是哪种类型(uint 8/16/32/256)\n- 例外，在 struct 中如果有多个uint， solidity 可以将空间存储最小化。\n\n```js\nstruct NormalStruct {\n\tuint a;\n\tuint b;\n}\nstruct MiniStruct {\n uint 8 a;\n uint 32 b;\n}\n// 由于使用了结构打包（stack packing） mini 所占用的空间比 normal 小\nNormalStruct normal = NormalStruct(10, 20);\nMiniStruct mini = MiniStruct(10,20);\n","tags":"Blockchain solidity","title":"save gas","modified":"20220516052416162","type":"text/x-markdown"}
 ]</script><div id="storeArea" style="display:none;"></div>
 <!--~~ Library modules ~~-->
 <div id="libraryModules" style="display:none;">
